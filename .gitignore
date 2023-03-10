@@ -1,3 +1,4 @@
 app/src/__pycache__/
 .idea
 *.pkl
+/my_env
