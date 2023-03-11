@@ -5,6 +5,8 @@ WORKDIR /usr/app/
 # Копируем файл requirements.txt в контейнер и установим python зависимости
 COPY requirements.txt ./app_requirements/requirements.txt
 RUN pip install --no-cache-dir -r ./app_requirements/requirements.txt
+# также библиотеку можно прописать в requirements.txt
+RUN pip install uwsgi
 # копируем папку src в контейнер
 COPY src ./src
 # Обучаем модель, сериализуем объекты запуском скрипта model_train.py
